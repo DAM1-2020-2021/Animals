@@ -3,10 +3,6 @@ package org.iesfm.animals.composition;
 import java.util.Objects;
 
 public class AnimalComposition {
-    public static final String DOG_SPECIE = "dog";
-    public static final String CAT_SPECIE = "cat";
-    public static final String PIG_SPECIE = "pig";
-
     public static final String MAMMAL_FAMILY = "mammal";
     public static final String REPTIL_FAMILY = "reptil";
 
@@ -14,13 +10,13 @@ public class AnimalComposition {
     public static final String HERBIVOROUS_FEEDING = "herbivorous";
     public static final String OMNIVOROUS_FEEDING = "omnivorous";
 
-    private String specie;
+    private Specie specie;
     private String family;
     private String feeding;
     private String color;
     private int age;
 
-    public AnimalComposition(String specie, String feeding, String color, int age) {
+    public AnimalComposition(Specie specie, String feeding, String color, int age) {
         this.specie = specie;
         this.feeding = feeding;
         this.color = color;
@@ -28,13 +24,7 @@ public class AnimalComposition {
     }
 
     public void saySomething() {
-        if(specie.equals(DOG_SPECIE)) {
-            System.out.println("guau");
-        } else if(specie.equals(CAT_SPECIE)) {
-            System.out.println("miau");
-        } else if(specie.equals(PIG_SPECIE)){
-            System.out.println("oink");
-        }
+        specie.saySomething();
     }
 
     public String getSpecie() {
