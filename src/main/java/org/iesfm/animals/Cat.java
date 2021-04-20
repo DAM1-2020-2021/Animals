@@ -2,12 +2,17 @@ package org.iesfm.animals;
 
 import java.util.Objects;
 
-public class Cat extends Animal {
+public final class Cat extends Carnivorous {
     private int remainingLives;
 
     public Cat(String color, int age, int remainingLives) {
         super(color, age);
         this.remainingLives = remainingLives;
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("I am walking");
     }
 
     @Override

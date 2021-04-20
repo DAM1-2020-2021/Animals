@@ -2,13 +2,18 @@ package org.iesfm.animals;
 
 import java.util.Objects;
 
-public class Pig extends Animal {
+public final class Pig extends Omnivorous {
 
     private int weight;
 
     public Pig(String color, int age, int weight) {
         super(color, age);
         this.weight = weight;
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("I am walking");
     }
 
     @Override

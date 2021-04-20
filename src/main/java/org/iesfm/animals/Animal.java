@@ -13,8 +13,10 @@ public abstract class Animal {
 
     public abstract void saySomething();
 
-    public void sayHello() {
-        System.out.println("Hello, my color is " + color + ". I am " + age + " years old");
+    public abstract void walk();
+
+    protected final void eat() {
+        System.out.println("I am eating");
     }
 
     public String getColor() {
